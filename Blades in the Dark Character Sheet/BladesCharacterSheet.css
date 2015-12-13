@@ -151,6 +151,15 @@ input[name="attr_movedesc"]{
 	padding: 0;
 }
 
+.sheet-nested-col-left {
+	width: calc(50% - 10px) !important;
+	float: left;
+}
+
+.sheet-nested-col-right {
+	width: calc(50% - 10px) !important;
+	float: right;
+}
 
 .sheet-Cutter, 
 .sheet-Leech, 
@@ -214,6 +223,90 @@ input.sheet-harm-small {
     font-style: italic;
 }
 
+/* Hide actual radio/checkbox */
+input[type="checkbox"].sheet-coin, input[type="checkbox"].sheet-friend-down, input[type="checkbox"].sheet-friend-up
+{
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Fake checkbox */
+input[type="checkbox"].sheet-coin + span::before
+{
+    margin-right: 4px;
+    border: solid 0px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+    
+    content: "•";
+    color: #lightgrey;
+    width: 14px;
+    height: 14px;
+    font-size: 40px;
+
+}
+input[type="checkbox"].sheet-coin:checked + span::before
+{
+    content: "•";
+    color: #FFD601;
+}
+
+/* Fake checkbox */
+input[type="checkbox"].sheet-friend-down + span::before
+{
+    margin-right: 4px;
+    border: solid 0px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+    content: "▼";
+    color: lightgrey;
+    width: 14px;
+    height: 14px;
+    font-size: 20px;
+    
+}
+input[type="checkbox"].sheet-friend-down:checked + span::before
+{
+    content: "▼";
+    color: red;
+}
+
+/* Fake checkbox */
+input[type="checkbox"].sheet-friend-up + span::before
+{
+    margin-right: 4px;
+    border: solid 0px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+    content: "▲";
+    color: lightgrey;
+
+    width: 14px;
+    height: 14px;
+    font-size: 20px;
+    
+}
+input[type="checkbox"].sheet-friend-up:checked + span::before
+{
+    content: "▲";
+    color: green;
+}
 /**
 * http://nicolasgallagher.com/micro-clearfix-hack/
  * For modern browsers
