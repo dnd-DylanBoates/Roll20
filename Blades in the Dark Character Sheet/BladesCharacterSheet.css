@@ -1,0 +1,235 @@
+/*
+[Imgur](http://i.imgur.com/OjBPJL9.jpg)
+[Imgur](http://i.imgur.com/RNob7Yh.jpg)
+*/
+
+@font-face {
+font-family: 'Special Elite';
+font-style: normal;
+font-weight: 400;
+src: local('Special Elite'), local('SpecialElite-Regular'), url(http://fonts.gstatic.com/s/specialelite/v5/9-wW4zu3WNoD5Fjka35Jm4kzzdU71mzyRvKBGWbyScU.woff) format('woff');
+} 
+
+
+li {
+list-style: none;
+}
+
+.charsheet .sheet-maindiv label {
+    display: inline-block;
+    width: auto;
+    margin-left: 5px;
+	font-family: 'Special Elite', 'Helvetica', sans-serif;
+	font-weight: normal;
+}
+.charsheet .sheet-maindiv .sheet-col label {
+	display: inline-block;
+	width: auto;
+}
+.charsheet .sheet-maindiv .sheet-col label.sheet-harm {
+	padding-right: 0;
+}
+.charsheet .sheet-maindiv label.sheet-name {
+	font-weight: 400;
+	font-size: 1.5em;
+}
+
+.charsheet .sheet-maindiv .sheet-col .sheet-section-title {
+	background: url('http://i.imgur.com/OjBPJL9.jpg') repeat-x left center transparent;
+	color: #FFFFFF;
+	line-height: 43px;
+	height: 36px;
+	width: 100%;
+	padding-left: 15px;
+	margin-left: 0;
+	margin-bottom: 0;
+	font-size: 1.5em;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.charsheet .sheet-maindiv .sheet-col.sheet-even .sheet-section-title {
+	background: url('http://i.imgur.com/RNob7Yh.jpg') repeat-x left center transparent;
+}
+
+.charsheet .sheet-maindiv .sheet-col .sheet-harm.sheet-section-title,
+.charsheet .sheet-maindiv .sheet-col .sheet-other.sheet-section-title,
+.charsheet .sheet-maindiv .sheet-col .sheet-improvements.sheet-section-title {
+	margin-bottom: 10px;
+}
+
+.charsheet label.sheet-improvement {
+	font-size: 1em;
+}
+
+.charsheet label.sheet-lock {
+	width: auto;
+	font-size: 12px;
+	font-weight: 400;
+}
+
+.charsheet .sheet-attr-box {
+	padding: 5px;
+}
+.charsheet .sheet-attr-box input[type=text] {
+	width: 35px;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.charsheet .sheet-attr-box input[type=checkbox] {
+	width: auto;
+}
+
+label.sheet-cool.sheet-attr {
+	width: auto;
+	display: inline-block;
+	float: left;
+	line-height: 32px;
+}
+
+input.sheet-attr {
+	display: inline-block;
+	width: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+.ui-dialog .charsheet button[type=roll] {
+	float: right;
+}
+
+.sheet-move-box {
+	
+}
+.charsheet div.sheet-grey {
+	background: #EFEFEF;
+}
+.sheet-highlight {
+	font-size: 0.85em;
+}
+.repcontainer div.repitem {
+	padding: 5px;
+	background: #EFEFEF;
+	margin-bottom: 9px;
+}
+.repcontainer div.repitem {
+
+}
+div.repitem .sheet-movename, div.repitem .sheet-stat {
+	width: 20%;
+	box-sizing: border-box;
+}
+div.repitem input[type=text]{
+	width: 75%;
+}
+.repcontrol {
+	margin-bottom: 15px;
+}
+.repcontainer div.repitem select {
+	width: 75%;
+	margin: 0;
+}
+div.repitem .sheet-desc {
+	width: auto;
+}
+input[name="attr_movedesc"]{
+	width: auto;
+}
+.repitem textarea,
+.sheet-box textarea {
+	height: 32px;
+	box-sizing: border-box;
+}
+
+.largedialog textarea {
+	height: 80px;
+}
+
+.sheet-roll-box label.sheet-buttonLbl {
+	max-width: 80%;
+	margin: 0;
+	padding: 0;
+}
+
+
+.sheet-Cutter, 
+.sheet-Leech, 
+.sheet-Hound, 
+.sheet-Lurk, 
+.sheet-Slide, 
+.sheet-Whisper {
+	display: none;
+}
+
+.sheet-classSelected {
+	display: none;
+}
+
+.sheet-lock:checked ~ .sheet-class,
+.sheet-lock:checked ~ .sheet-class + label {
+	display: none;
+}
+.sheet-lock:checked ~ .sheet-class:checked,
+.sheet-lock:checked ~ .sheet-class:checked + label,
+.sheet-lock:checked ~ .sheet-classSelected {
+	display: inline-block;
+}
+
+.sheet-lock:not(:checked) ~ .sheet-class,
+.sheet-lock:not(:checked) ~ .sheet-class + label {
+	display: inline-block;
+}
+
+.sheet-lock:checked ~ .sheet-classcol {
+	display: none;
+}
+
+.sheet-classcol > .sheet-class:checked,
+.sheet-classcol > .sheet-class:checked + label {
+	display: inline-block;
+}
+
+input.sheet-showhide:checked ~ .sheet-subbox {display: none;}
+
+.sheet-isCutter:checked ~ .sheet-Cutter,
+.sheet-isHound:checked ~ .sheet-Hound,
+.sheet-isLeech:checked ~ .sheet-Leech,
+.sheet-isLurk:checked ~ .sheet-Lurk,
+.sheet-isSlide:checked ~ .sheet-Slide,
+.sheet-isWhisper:checked ~ .sheet-Whisper {
+	display: block;
+}
+
+input.sheet-harm {
+	display: inline-block;
+	width: 80%;
+}
+
+input.sheet-harm-small {
+	display: inline-block;
+	width: 40%;
+}
+
+.sheet-italic {
+    font-style: italic;
+}
+
+/**
+* http://nicolasgallagher.com/micro-clearfix-hack/
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.sheet-cf:before,
+.sheet-cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.sheet-cf:after {
+    clear: both;
+}
