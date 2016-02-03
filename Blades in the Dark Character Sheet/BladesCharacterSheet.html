@@ -30,7 +30,7 @@
 	</div>           
 
 	<div class="sheet-3colrow">
-		<div class="sheet-col odd" style="width:250px">
+		<div class="sheet-col odd" style="width:255px">
 			<label class="sheet-class-moves sheet-section-title">Insight:</label>
 			<div class="sheet-tracker sheet-class-moves sheet-section-title">
 				<input type="checkbox" name="attr_sheet-insight-improvement-1" />
@@ -119,11 +119,9 @@
 				<button type='roll' value='&{template:blades} {{name=@{character_name}}} {{roll_name=Sway}} {{result=[[@{sway}d6sd]]}}' name='roll_som' ></button>			
 			</div>
 
-
-
 			<div class="sheet-box">
 				<label class="sheet-section-title">Playbook Advancement:</label>
-				<div class="sheet-tracker sheet-class-moves sheet-section-title">
+				<div class="sheet-tracker sheet-class-moves">
 					<input type="checkbox" name="attr_sheet-improvement-1" />
 					<input type="checkbox" name="attr_sheet-improvement-2" />
 					<input type="checkbox" name="attr_sheet-improvement-3" />
@@ -384,6 +382,44 @@
 		</div>
 
 		<div class="sheet-col even">
+			<div class="sheet-box">
+				<label class="sheet-section-title">Stress and Trauma:</label>
+				<div class="sheet-tracker sheet-stress">
+					<span>Stress</span>
+					<input type="checkbox" name="attr_sheet-stress-1" />
+					<input type="checkbox" name="attr_sheet-stress-2" />
+					<input type="checkbox" name="attr_sheet-stress-3" />
+					<input type="checkbox" name="attr_sheet-stress-4" />
+					<input type="checkbox" name="attr_sheet-stress-5" />
+					<input type="checkbox" name="attr_sheet-stress-6" />
+					<input type="checkbox" name="attr_sheet-stress-7" />
+					<input type="checkbox" name="attr_sheet-stress-8" />
+					<input type="checkbox" name="attr_sheet-stress-9" />
+				</div>
+				<div class="sheet-tracker sheet-trauma sheet-2colrow">
+					<span>Trauma</span><br/>
+					<div class='sheet-nested-col-left'>
+						<input type="checkbox" name="attr_sheet-trauma-1" />
+						<label for="attr_sheet-trauma-1">Cold</label>
+						<input type="checkbox" name="attr_sheet-trauma-2" /> 
+						<label for="attr_sheet-trauma-2">Haunted</label>
+						<input type="checkbox" name="attr_sheet-trauma-3" /> 
+						<label for="attr_sheet-trauma-3">Obsessed</label>
+						<input type="checkbox" name="attr_sheet-trauma-4" /> 
+						<label for="attr_sheet-trauma-4">Paranoid</label>
+					</div> 
+					<div class='sheet-nested-col-right'>
+						<input type="checkbox" name="attr_sheet-trauma-5" />
+						<label for="attr_sheet-trauma-5">Reckless</label>
+						<input type="checkbox" name="attr_sheet-trauma-6" /> 
+						<label for="attr_sheet-trauma-6">Soft</label>
+						<input type="checkbox" name="attr_sheet-trauma-7" /> 
+						<label for="attr_sheet-trauma-7">Unstable</label>
+						<input type="checkbox" name="attr_sheet-trauma-8" /> 
+						<label for="attr_sheet-trauma-8">Vicious</label> 
+					</div>
+				</div>
+			</div>
 			<div class="sheet-subbox">
 				<!-- Class Selected -->
 				<input type="checkbox" name="attr_class" class="sheet-isCutter" value='Cutter' style="display: none;" />
@@ -749,11 +785,11 @@
 		<div class="sheet-col">
 			<div class="sheet-box">
 				<label class="sheet-harm sheet-section-title">Harm:</label>
-				3<input type="text" class="sheet-harm" name="attr_severe-harm"/>Need Help<br/>
-				2<input type="text" class="sheet-harm-small" name="attr_standard-harm-1"/>
-				<input type="text" class="sheet-harm-small" name="attr_standard-harm-2"/>-1d<br/>
-				1<input type="text" class="sheet-harm-small" name="attr_lesser-harm-1"/>
-				<input type="text" class="sheet-harm-small" name="attr_lesser-harm-2"/>Reduced Effect<br/>
+				3<input type="text" class="sheet-harm" name="attr_severe-harm" placeholder="Need Help"><br/>
+				2<input type="text" class="sheet-harm-small" name="attr_standard-harm-1" placeholder="-1d"/>
+				<input type="text" class="sheet-harm-small" name="attr_standard-harm-2" placeholder="-1d"/><br/>
+				1<input type="text" class="sheet-harm-small" name="attr_lesser-harm-1" placeholder="Reduced Effect"/>
+				<input type="text" class="sheet-harm-small" name="attr_lesser-harm-2" placeholder="Reduced Effect"/><br/>
 				<div class="sheet-2colrow">
 
 					<div class="sheet-nested-col-left">
@@ -786,7 +822,8 @@
 						</div>
 					</div>
 					<br/>
-					<div class="sheet-nested-col-right">
+					<label class="sheet-coin sheet-section-title">Coin:</label>
+					<div class="sheet-box">
 						<span>Coin </span><br/>
 						<input type="checkbox" class="sheet-coin" name="attr_Coin-1" /><span></span>
 						<input type="checkbox" class="sheet-coin" name="attr_Coin-2" /><span></span>
