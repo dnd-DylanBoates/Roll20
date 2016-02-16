@@ -4,11 +4,17 @@
 */
 
 @font-face {
-font-family: 'Special Elite';
-font-style: normal;
-font-weight: 400;
-src: local('Special Elite'), local('SpecialElite-Regular'), url(http://fonts.gstatic.com/s/specialelite/v5/9-wW4zu3WNoD5Fjka35Jm4kzzdU71mzyRvKBGWbyScU.woff) format('woff');
-} 
+    font-family: 'kirstyregular';
+    src: url('http://dl.dropboxusercontent.com/u/82873359/Kirsty/kirsty-webfont.eot');
+    src: url('http://dl.dropboxusercontent.com/u/82873359/Kirsty/kirsty-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://dl.dropboxusercontent.com/u/82873359/Kirsty/kirsty-webfont.woff2') format('woff2'),
+         url('http://dl.dropboxusercontent.com/u/82873359/Kirsty/kirsty-webfont.woff') format('woff'),
+         url('http://dl.dropboxusercontent.com/u/82873359/Kirsty/kirsty-webfont.ttf') format('truetype'),
+         url('http://dl.dropboxusercontent.com/u/82873359/Kirsty/kirsty-webfont.svg#kirstyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 
 li {
@@ -18,11 +24,11 @@ ul {
 	margin: 0 0 9px 5px;
 }
 
-.charsheet .sheet-maindiv label {
+.charsheet .sheet-maindiv label.sheet-section-title {
     display: inline-block;
     width: auto;
     margin-left: 5px;
-	font-family: 'Special Elite', 'Helvetica', sans-serif;
+	font-family: 'kirstyregular', 'Helvetica', sans-serif;
 	font-weight: normal;
 }
 .charsheet .sheet-maindiv .sheet-col label {
@@ -54,6 +60,10 @@ ul {
 	background: url('http://i.imgur.com/RNob7Yh.jpg') repeat-x left center transparent;
 }
 
+.sheet-xp-tracker {
+	height: 10px !important;
+}
+
 .charsheet .sheet-maindiv .sheet-col .sheet-harm.sheet-section-title,
 .charsheet .sheet-maindiv .sheet-col .sheet-other.sheet-section-title,
 .charsheet .sheet-maindiv .sheet-col .sheet-improvements.sheet-section-title {
@@ -62,6 +72,7 @@ ul {
 
 .charsheet label.sheet-improvement {
 	font-size: 1em;
+	font-weight: normal;
 }
 
 .charsheet label.sheet-lock {
@@ -169,6 +180,7 @@ input[name="attr_movedesc"]{
 .sheet-Hound, 
 .sheet-Lurk, 
 .sheet-Slide, 
+.sheet-Spider, 
 .sheet-Whisper {
 	display: none;
 }
@@ -208,6 +220,7 @@ input.sheet-showhide:checked ~ .sheet-subbox {display: none;}
 .sheet-isLeech:checked ~ .sheet-Leech,
 .sheet-isLurk:checked ~ .sheet-Lurk,
 .sheet-isSlide:checked ~ .sheet-Slide,
+.sheet-isSpider:checked ~ .sheet-Spider,
 .sheet-isWhisper:checked ~ .sheet-Whisper {
 	display: block;
 }
@@ -226,8 +239,13 @@ input.sheet-harm-small {
     font-style: italic;
 }
 
+.sheet-inline {
+	display: inline-block;
+	width: auto;
+}
+
 /* Hide actual radio/checkbox */
-input[type="checkbox"].sheet-coin, input[type="checkbox"].sheet-friend-down, input[type="checkbox"].sheet-friend-up
+input[type="checkbox"].sheet-coin, input[type="checkbox"].sheet-friend-down, input[type="checkbox"].sheet-friend-up, input[type="checkbox"].sheet-attribute-xp
 {
     opacity: 0;
     width: 16px;
@@ -302,14 +320,34 @@ input[type="checkbox"].sheet-friend-up + span::before
 
     width: 14px;
     height: 14px;
-    font-size: 20px;
-    
+    font-size: 20px;   
 }
 input[type="checkbox"].sheet-friend-up:checked + span::before
 {
     content: "▲";
     color: green;
 }
+
+/* Fake checkbox */
+input[type="checkbox"].sheet-attribute-xp + span::before
+{
+    border: solid 0px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    vertical-align: top;
+    content: "▮";
+    color: lightgrey;
+
+    width: 14px;
+    height: 14px;
+    font-size: 20px;   
+}
+input[type="checkbox"].sheet-attribute-xp:checked + span::before
+{
+    content: "▮";
+    color: green;
+}
+
 /**
 * http://nicolasgallagher.com/micro-clearfix-hack/
  * For modern browsers
